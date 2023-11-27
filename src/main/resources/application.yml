@@ -1,0 +1,28 @@
+# 全局配置文件
+
+# server setting
+server:
+  port: 18080
+
+# Spring setting
+spring:
+  profiles:
+    active: dev
+
+# mybatis-plus setting
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-field: delFlag # 全局逻辑删除的实体字段名（since 3.3.0，配置后可以忽略不配置步骤2）
+      logic-delete-value: 1 # 配置逻辑删除值
+      logic-not-delete-value: 0 # 配置逻辑未删除值
+
+
+
+# mybatis setting
+#mybatis:
+#  type-aliases-package: com.demo.entity
+#  mapper-locations: classpath:mapper/**/*.xml
