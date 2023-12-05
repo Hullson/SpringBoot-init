@@ -1,2 +1,2 @@
-# web-demo
+# SpringBoot init
 SpringBoot模版
